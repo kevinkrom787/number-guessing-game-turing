@@ -1,0 +1,14 @@
+
+
+if (convertedGuess > randomNumber) {
+  lowOrHigh.innerText = 'Too high! Guess again';
+ // lastGuess.innerText = ; link to number - getting error of 'cant set innerText to null' in console ?
+} else if (convertedGuess < randomNumber) {
+  lowOrHigh.innerText = 'Too low, Joe! Guess again';
+  // lastGuess.innerText = the number //
+} else if (convertedGuess === randomNumber) {
+  lowOrHigh.innerText = 'Boom! You are amazing!';
+  // lastGuess.innerText = the number! // 
+} else {
+  lowOrHigh.innerText = 'You broke my game!';
+}
