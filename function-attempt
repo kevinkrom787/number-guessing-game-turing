@@ -1,0 +1,7 @@
+function checkGuess() {
+  event.preventDefault(formOne); 
+  lastGuess.innerText = convertNumber;
+  var convertNumber = parseInt(userInput.value);
+  
+  
+}
