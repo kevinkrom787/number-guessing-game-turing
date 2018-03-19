@@ -1,0 +1,47 @@
+// Generating the random number 
+var randomNumber = Math.floor(Math.random() * 100) + 1; // generate random number between 1-100
+
+// inputs 
+var userInput = document.getElementById('userInput'); // whatever number the user submits in the input field
+var convertedGuess = parseInt(userInput.value);
+console.log(userInput.value);
+
+// feedback
+var lastGuess = document.getElementById('lastGuess');
+var lowOrHigh = document.getElementById('lowOrHigh');
+
+// form - need to not reload the page  
+// var formOne = document.preventDefault();
+
+// buttons 
+var guessButton = document.getElementById('guessButton'); // the buton to input the number selected above and put it into the function
+var clearButton = document.getElementById('clearButton'); // clear the 
+var resetGame = document.getElementById('resetGame'); // reset game and generate a new random number
+
+
+// all event listeners - Should be three - 1. check the guess against the random number to start game. 2. clear to erase
+
+guessButton.addEventListener('click', guessCheck);
+
+userInput.addEventListener('keyup', function(){
+  console.log(userInput.value);
+});
+  // When click 'guess button' I want to run the userInput against randomNumber //
+//clearButton.addEventListener('click', ; {} // why does this need a {} where as checkGuess? //
+ // clear the userInput field //
+//resetGame.addEventListener('click', function()) {
+  // add code that picks new randomNumber and resets game
+
+// I want this to run the number (as a NUMBER)
+function guessCheck(e) {
+  e.preventDefault();
+  var convertedGuess = parseInt(userInput.value);
+  lastGuess.innerText = userInput.value;
+  } 
+  // if (lastGuess === randomNumber) {
+//   lowOrHigh.innerText = 'Boom! You are AMAZING';
+// } else if (lastGuess > randomNumber) {
+//   lowOrHigh.innerText = 'Too high!';
+// } else {
+//   lowOrHigh.innerText = 'Too low, Joe';
+// }
